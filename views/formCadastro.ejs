@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="stylesheets/formCadastro.css">
+</head>
+<body>
+    <img id="" src="" alt="">
+    <div class="box">
+        <form action="/routes/cadastroProduto.js/criar" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend><b>Cadastro de Produtos</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome_produto" class="inputUser" required>
+                    <label for="nome_produto" class="labelInput">Nome do produto:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                  <input type="number" name="preco" id="preco" class="inputUser" required>
+                  <label for="preco" class="labelInput">Preço:</label>
+              </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="descricao" id="email" class="inputUser" required>
+                    <label for="descricao" class="labelInput">Descrição:</label>
+                </div>
+                <br><br>
+                <p>Imagem do produto:</p>
+                <br>
+                <div class="inputBox">
+                    <input type="file" name="avatar" id="upload_image" class="inputUser" required>
+                    <!-- <label for="imagem" class="labelInput">Imagem do produto:</label> -->
+                </div>
+                <br><br>
+                <p>Condição:</p>
+                <br>
+                <input type="radio" name="condicao" id="novo" value="novo" required><label for="novo">Novo</label>
+                <input type="radio" name="condicao" id="seminovo" value="seminovo" required><label for="seminovo">Semi-novo</label>
+                <input type="radio" name="condicao" id="usado" value="usado" required><label for="usado">Usado</label>
+                <br><br><br>
+                <div class="inputBox">
+                  <input type="password" name="confirm-senha" id="confirm-senha" class="inputUser" required>
+                  <label for="confirm-senha" class="labelInput">Por Favor, Confirme sua senha:</label>
+                </div>
+                <button id="submit">Cadastrar Produto!</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
